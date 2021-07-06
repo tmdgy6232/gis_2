@@ -1,4 +1,21 @@
- {% extends 'base.html' %}
- {% block content %}
-     <div>아오 니믜럴</div>
- {% endblock %}
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .testing {
+            background-color: yellow;
+            height : 48px;
+            width : 48px;
+            border-radius: .5rem;
+            margin : 1rem;
+        }
+    </style>
+    <div style="height: 20rem; background-color: aqua; border-radius: 1rem; margin: 2rem;">
+        <h1>testest</h1>
+        <div class="testing" style="display: block ">block</div>
+        <div class="testing" style="display: inline">inline</div>
+        <div class="testing" style="display: inline-block">inline-block</div>
+        <div class="testing" style="display: none">none</div>
+        <div class="testing">default</div>
+
+    </div>
+{% endblock %}
