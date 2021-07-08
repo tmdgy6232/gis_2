@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div style="text-align: center; margin: 2rem;">
+    <div style="margin: 2rem; text-align: center;">
         <h1>METHOD</h1>
-        <h3> {{ text }}</h3>
+        {% if hello_world_list %}
+            {% for text in hello_world_list %}
+                 <h3>{{ text.text }}</h3>
+            {% endfor %}
+        {% endif %}
+
         <form action="/accounts/hello_world/", method="post">
             {% csrf_token %}
+            <input type="text" name="hello_world_input">
             <input class="btn btn-dark rounded-pill px-4" type="submit" value="제출">
         </form>
+
     </div>
 {% endblock %}

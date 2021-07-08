@@ -1,11 +1,20 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+from django.urls import reverse
 
-def hello_world(request):
-    print(request.get_port())
+from accountapp.models import HelloWorld
+
+
+def helloworld(request):
     if request.method == "POST":
-        return render(request, 'accountapp/hello_world.html', context={'text':'postmethod'})
+        temp = request.POST.get('hello_world_input')
+        helloWorldInstance = HelloWorld()
+        helloWorldInstance.text = temp
+        helloWorldInstance.save()
+        hello_world_list = HelloWorld.objects.all()
+        return render(request, 'accountapp/hello_world.html', context={'hello_world_list' : hello_world_list})
     else:
-        return render(request, 'accountapp/hello_world.html', context={'text':'getmethod'})
+        hello_world_list = HelloWorld.objects.all()
+        return render(request, 'accountapp/hello_world.html', context={'hello_world_list' : hello_world_list})
