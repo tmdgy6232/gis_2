@@ -1,21 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-    <style>
-        .testing {
-            background-color: yellow;
-            height : 48px;
-            width : 48px;
-            border-radius: .5rem;
-            margin : 1rem;
-        }
-    </style>
-    <div style="height: 20rem; background-color: aqua; border-radius: 1rem; margin: 2rem;">
-        <h1>testest</h1>
-        <div class="testing" style="display: inline-block; ">block</div>
-        <div class="testing" style="display: inline-block; width: 3rem; height: 3rem; ">inline</div>
-        <div class="testing" style="display: inline-block; width: 3em; height: 3em; font-size: 10em;">inline-block</div>
-        <div class="testing" style="display: inline-block; width: 30%; height: 30%">none</div>
-        <div class="testing">default</div>
-
+    <div style="text-align: center; margin: 2rem;">
+        <h1>METHOD</h1>
+        <h3> {{ text }}</h3>
     </div>
 {% endblock %}
