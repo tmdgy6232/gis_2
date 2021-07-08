@@ -3,5 +3,9 @@
     <div style="text-align: center; margin: 2rem;">
         <h1>METHOD</h1>
         <h3> {{ text }}</h3>
+        <form action="/accounts/hello_world/", method="post">
+            {% csrf_token %}
+            <input class="btn btn-dark rounded-pill px-4" type="submit" value="제출">
+        </form>
     </div>
 {% endblock %}
