@@ -5,7 +5,15 @@
     <div class="pragmatic_header_button">
         <span>nav1</span>
         <span>nav2</span>
-        <span>nav3</span>
-        <span>nav4</span>
+        <span>
+            {% if not is_authenticated  %}
+            <a href="{% url 'accountapp:login' %}">Login</a>
+            {% else %}
+            <a href="{% url 'accountapp:logout' %}">Logout</a>
+            {% endif %}
+        </span>
+        <span>
+            <a href="{% url 'accountapp:create' %}">SignUp</a>
+        </span>
     </div>
 </div>
