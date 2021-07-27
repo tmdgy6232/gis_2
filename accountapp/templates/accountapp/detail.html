@@ -5,14 +5,14 @@
         <div class="m-5">
             {% if target_user.profile %}
                 <img class="profile_image" src="{{ target_user.profile.image.url }}" alt="profile image">
-                <h4>{{ target_user.profile.nickname }}</h4>
+                <h4 class="NNS_B">{{ target_user.profile.nickname }}</h4>
                 <h5>{{ target_user.profile.message }}</h5>
             {% else %}
-                <h4>
+                <h2>
                     <a href="{% url 'profileapp:create' %}">
                         Create Profile
                     </a>
-                </h4>
+                </h2>
             {% endif %}
         </div>
         <div>
