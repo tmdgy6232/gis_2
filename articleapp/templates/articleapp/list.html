@@ -19,45 +19,13 @@
 </style>
 
 <div class="container my-4">
-  <div class="item1">
-      <img src="https://picsum.photos/200/250">
-  </div>
-  <div class="item2">
-      <img src="https://picsum.photos/200/301">
-  </div>
-  <div class="item3">
-      <img src="https://picsum.photos/200/302">
-  </div>
-  <div class="item4">
-      <img src="https://picsum.photos/200/280">
-  </div>
-  <div class="item5">
-      <img src="https://picsum.photos/200/400">
-  </div>
-  <div class="item6">
-      <img src="https://picsum.photos/200/420">
-  </div>
-  <div class="item7">
-      <img src="https://picsum.photos/200/350">
-  </div>
-  <div class="item8">
-      <img src="https://picsum.photos/200/307">
-  </div>
-  <div class="item9">
-      <img src="https://picsum.photos/200/308">
-  </div>
-  <div class="item10">
-    <img src="https://picsum.photos/200/309">
-  </div>
-  <div class="item11">
-    <img src="https://picsum.photos/200/310">
-  </div>
-  <div class="item12">
-     <img src="https://picsum.photos/200/311">
-  </div>
-  <div class="item13">
-     <img src="https://picsum.photos/200/312">
-  </div>
+  {% for article in article_list %}
+        <div>
+            <a href="{% url 'articleapp:detail' pk=article.pk %}">
+                <img src="{{ article.image.url }}" alt="">
+            </a>
+        </div>
+    {% endfor %}
 </div>
 <script src="{% static 'js/magicgrid.js' %}">
 
