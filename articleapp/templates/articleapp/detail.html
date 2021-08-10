@@ -27,6 +27,17 @@
             {% endif %}
         </div>
         <div class="text-center my-4">
+            {% for comment in target_article.commnet.all %}
+                <div class="comment_box">
+                    <div>
+                        <span style="font-size: 1.3rem;" class="NNS_B">{{ comment.writer.profile.nickname }}</span>
+                        <span>{{ comment.create_at }}</span>
+                    </div>
+                    <div>
+                        {{ comment.content }}
+                    </div>
+                </div>
+            {% endfor %}
             {% include 'commentapp/create.html' %}
         </div>
     </div>
