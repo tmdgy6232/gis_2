@@ -26,6 +26,7 @@
             </div>
             {% endif %}
         </div>
+        <hr>
         <div class="text-center my-4">
             {% for comment in target_article.commnet.all %}
                 <div class="comment_box">
@@ -34,8 +35,15 @@
                         <span>{{ comment.create_at }}</span>
                     </div>
                     <div>
-                        {{ comment.content }}
+                        <p>
+                            {{ comment.content }}
+                        </p>
                     </div>
+                    {% if comment.writer == user %}
+                        <div style="text-align: right">
+                            <a class="btn btn-danger rounded-pill px-5" href="{% url 'commentapp:delete' pk=comment.pk %}">Delete</a>
+                        </div>
+                    {% endif %}
                 </div>
             {% endfor %}
             {% include 'commentapp/create.html' %}
