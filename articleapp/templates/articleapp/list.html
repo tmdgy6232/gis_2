@@ -4,14 +4,20 @@
 {% block content %}
 
 <style>
+    .container {
+        padding: 0;
+        margin: 0 auto;
+    }
     .container div {
-      width:280px;
+      width:45%;
+      max-width: 250px;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 1rem;
+      flex-direction: column;
+      box-shadow: 0 0 1rem grey;
     }
-
     .container img{
         border-radius: 1rem;
         width: 100%;
