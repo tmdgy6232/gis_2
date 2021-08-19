@@ -15,7 +15,6 @@
       align-items: center;
       border-radius: 1rem;
       flex-direction: column;
-      box-shadow: 0 0 1rem grey;
     }
 
     .container img{
@@ -32,7 +31,7 @@
             <a href="{% url 'projectapp:detail' pk=project.pk %}">
                 <img src="{{ project.image.url }}" alt="">
             </a>
-        <span class="m-1">{{ project.name }}</span>
+        <span class="m-1">{{ project.name | truncatechars:10 }}</span>
         </div>
     {% endfor %}
 </div>
