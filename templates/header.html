@@ -13,11 +13,7 @@
                 Projects
             </a>
         </span>
-        <span>
-            <a href="{% url 'subscribeapp:list' %}">
-                Subscription
-            </a>
-        </span>
+
         {% if not user.is_authenticated %}
             <span>
                 <a href="{% url 'accountapp:login' %}">Login</a>
@@ -26,6 +22,11 @@
                  <a href="{% url 'accountapp:create' %}">SignUp</a>
             </span>
         {% else %}
+            <span>
+                <a href="{% url 'subscribeapp:list' %}">
+                    Subscription
+                </a>
+            </span>
             <span>
                 <a href="{% url 'accountapp:detail' pk=user.pk %}">MyPage</a>
             </span>

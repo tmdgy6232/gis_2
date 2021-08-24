@@ -29,6 +29,7 @@ urlpatterns = [
     path('comments/', include('commentapp.urls')),
     path('projects/', include('projectapp.urls')),
     path('subscribe/', include('subscribeapp.urls')),
+    path('likes/', include('likeapp.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) # 미디어 파일을 제공받기 위해 추가
 
 
