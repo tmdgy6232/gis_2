@@ -12,18 +12,19 @@
     margin: 1.5rem;
 }
 
-.mw-500{
+.mw-500 {
     max-width: 500px;
     padding: 1rem 1.5rem;
 }
 
-.profile_image{
-    height: 12rem;
+.profile_image {
     width: 12rem;
+    height: 12rem;
     border-radius: 20rem;
     object-fit: cover;
 }
-.NNS_B{
+
+.NNS_B {
     font-family: "NanumSquareB", cursive;
 }
 
@@ -35,7 +36,7 @@
     padding : .2rem
 }
 
-.round_button:hover{
+.round_button:hover {
     color: dimgray;
 }
 
@@ -65,4 +66,13 @@
         /* default 16px */
         font-size: 13px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: black;
 }
