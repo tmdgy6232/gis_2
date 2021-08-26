@@ -22,7 +22,7 @@
             {#  게시글 대표이미지, 글내용 #}
             <img src="{{ target_article.image.url }}" class="article_image">
             <div class="article_content">
-                {{ target_article.content }}
+                {{ target_article.content | safe }}
             </div>
             {% if target_article.writer == user %}
             <div>
