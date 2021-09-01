@@ -62,3 +62,6 @@ __pycache__/
 /db_backup.sqlite3
 media/
 staticfiles/
+gis_5.pem
+gis_5ban_gcp
+gis_5ban_gcp.pub
