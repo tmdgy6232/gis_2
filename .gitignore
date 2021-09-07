@@ -65,3 +65,4 @@ staticfiles/
 gis_5.pem
 gis_5ban_gcp
 gis_5ban_gcp.pub
+Dockerfile
